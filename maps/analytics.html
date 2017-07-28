@@ -1,0 +1,90 @@
+<!DOCTYPE html >
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+    <title>Listing registered users</title>
+    
+    <style>
+      html, body 
+      {
+        height: 100%;
+        margin: 40;
+        padding: 20;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div>
+      <p>SIMPLE ANALYTICS</p>
+    </div>
+      
+      <div style="white-space: nowrap">
+          <div style="width: 40%;">
+        <p>LINE CHART</p>
+          <canvas id="linechart"></canvas>  
+          <!-- <canvas id="barchart"></canvas> -->
+          <p>BAR CHART</p>
+          <canvas id="barchart"></canvas> 
+        </div>
+
+        <!-- <div style="width: 40%;">
+        <p>BAR CHART</p>
+          <canvas id="barchart"></canvas>  
+         
+        </div>  
+      </div>  -->
+
+      
+      
+
+      <!-- LINE CHART -->
+      <script>
+      var ctx = document.getElementById('linechart').getContext('2d');
+      var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+      labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+      datasets: [{
+        label: 'calls',
+        data: [12, 19, 3, 17, 6, 3, 7],
+        backgroundColor: "rgba(0, 188, 212, 0.77)"
+        }, {
+        label: 'SMSs',
+        data: [2, 29, 5, 5, 2, 3, 10],
+        backgroundColor: "rgba(198, 40, 40, 0.77)"
+        }]
+      }
+    });
+    </script>
+    <!-- LINE CHART ENDS -->
+
+    <!-- BAR CHART -->
+    <script>
+      var ctx = document.getElementById('barchart').getContext('2d');
+      var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+      labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+      datasets: [{
+        label: 'calls',
+        data: [12, 19, 3, 17, 6, 3, 7],
+        backgroundColor: "rgba(0, 188, 212, 0.77)"
+        }, {
+        label: 'SMSs',
+        data: [2, 29, 5, 5, 2, 3, 10],
+        backgroundColor: "rgba(198, 40, 40, 0.77)"
+        }]
+      }
+    });
+    </script>
+    <!-- BAR CHART ENDS -->
+
+
+  </body>
+</html>

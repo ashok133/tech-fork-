@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+
+body{
+	background-color: #eeeff0;
+}
+
+a { 
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+
+.container{
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    background: #35b729;
+}
+nav a {
+    font-size: 1.25em;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    padding: 23px 40px 23px 25px;
+    display: block;
+    background: #35b729;
+}
+nav a:hover {
+    color: #fff;
+}
+nav ul {
+    position: relative;
+    display: inline-table;
+    list-style: none;
+}
+
+
+nav ul ul {
+    display: block;
+    visibility: hidden;
+    opacity: 0;    
+    margin-left: 0px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+nav > div > ul > li > ul {
+    padding-top: 13px;
+    margin-top: -10px;
+    border-radius: 2px;
+    font-size: 0.75em;
+}
+nav ul li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+nav ul li:hover > ul {
+    margin-top: 3px;
+     -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+nav > div > ul > li > ul:before{
+    content: "";
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #2e9f24 transparent;
+    height: 0;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    width: 0;
+    -webkit-transform: rotate(360deg);
+}
+
+nav ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+nav ul li {
+    float: left;
+}
+nav ul ul {
+    position: absolute;
+    top: 100%;
+}
+nav ul ul li {
+    float: none;
+    position: relative;
+}
+
+nav ul ul li a{
+    color: #fff;
+    min-width: 100px;
+}
+nav ul ul ul li a {
+    color: #fff;
+    min-width: 100px;
+    margin-left: 10px;
+}
+nav ul ul li a:hover {
+    background: #2e9f24;
+}
+nav ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 150px;
+}
+
+.right{
+    float: right;
+}
+

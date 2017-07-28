@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="users_map.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+    <title>Listing registered users</title>
+    
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 70%;
+        width: 70%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 40;
+        padding: 20;
+      }
+    </style>
+  
+
+
+  </head>
+
+  <body>
+    <div>
+      <p>SIMPLE ANALYTICS</p>
+    </div>
+      
+      <div id="map"></div> 
+      <p>LINE CHART</p>
+      <div id="linechart"></div>  
+
+      <script>
+      var ctx = document.getElementById('linechart').getContext('2d');
+      var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+      labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+      datasets: [{
+        label: 'apples',
+        data: [12, 19, 3, 17, 6, 3, 7],
+        backgroundColor: "rgba(153,255,51,0.4)"
+        }, {
+        label: 'oranges',
+        data: [2, 29, 5, 5, 2, 3, 10],
+        backgroundColor: "rgba(255,153,0,0.4)"
+        }]
+      }
+    });
+    </script>
+     
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBajZN0DSFN6ss6MsSpqiHjUSHlTYm80Ls&callback=initMap">
+    </script>
+
+    <!-- LINE CHART -->
+    
+
+  </body>
+</html>
